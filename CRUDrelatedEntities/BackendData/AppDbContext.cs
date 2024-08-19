@@ -4,65 +4,26 @@ using Microsoft.EntityFrameworkCore;
 namespace BackendData;
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public DbSet<Author> Authors => Set<Author>();
-    public DbSet<Book> Books => Set<Book>();
+    public DbSet<Blog> Blogs => Set<Blog>();
+    public DbSet<Post> Posts => Set<Post>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        _ = modelBuilder.Entity<Author>().HasData(
-                        new Author
-                        {
-                            AuthorId = 1,
-                            Name = "Martin Fowler",
-                            PluralsightUrl = "https://app.pluralsight.com/profile/martin-fowler",
-                            TwitterAlias = "https://twitter.com/martinfawler"
-                        },
-                        new Author
-                        {
-                            AuthorId = 2,
-                            Name = "Eric Evans",
-                            PluralsightUrl = "https://app.pluralsight.com/profile/eric-evans",
-                            TwitterAlias = "https://twitter.com/ericevans"
-                        },
-                        new Author
-                        {
-                            AuthorId = 3,
-                            Name = "Steve Smith",
-                            PluralsightUrl = "https://app.pluralsight.com/profile/steve-smith",
-                            TwitterAlias = "https://twitter.com/stevesmith"
-                        }
-                    );
+        modelBuilder.Entity<Blog>().HasData(
+                new Blog { BlogId = 1, Url = "https://blog1.com", Rating = 2 },
+                new Blog { BlogId = 2, Url = "https://blog2.com", Rating = 3 },
+                new Blog { BlogId = 3, Url = "https://blog3.com", Rating = 1 },
+                new Blog { BlogId = 4, Url = "https://blog5.com", Rating = 3 }
+                );
 
-        _ = modelBuilder.Entity<Book>().HasData(
-                        new Book
-                        {
-                            BookId = 1,
-                            Title = "Refactoring",
-                            Publisher = "Addison-Wesley",
-                            AuthorId = 1
-                        },
-                        new Book
-                        {
-                            BookId = 2,
-                            Title = "Domain-Driven Design",
-                            Publisher = "Addison-Wesley",
-                            AuthorId = 1
-                        },
-                        new Book
-                        {
-                            BookId = 3,
-                            Title = "Clean Architecture",
-                            Publisher = "Prentice Hall",
-                            AuthorId = 2
-                        },
-                        new Book
-                        {
-                            BookId = 4,
-                            Title = "Implementing Domain-Driven Design",
-                            Publisher = "Addison-Wesley",
-                            AuthorId = 2
-                        }
-                    );
+        modelBuilder.Entity<Post>().HasData(
+                new Post() { PostId = 1, Title = "Post 1", Content = "Dette er Post 1 i Blog 1", Rating = 2, BlogId = 1 },
+                new Post() { PostId = 2, Title = "Post 2", Content = "Dette er Post 2 i Blog 1", Rating = 3, BlogId = 1 },
+                new Post() { PostId = 3, Title = "Post 3", Content = "Dette er Post 3 i Blog 1", Rating = 4, BlogId = 1 },
+                new Post() { PostId = 4, Title = "Post 4", Content = "Dette er post 4 i Blog 2", Rating = 3, BlogId = 2 },
+                new Post() { PostId = 5, Title = "Post 5", Content = "Dette er post 5 i Blog 2", Rating = 1, BlogId = 2 },
+                new Post() { PostId = 6, Title = "Post 6", Content = "Dette er post 6 i Blog 3", Rating = 2, BlogId = 3 }
+                );
 
         base.OnModelCreating(modelBuilder);
     }

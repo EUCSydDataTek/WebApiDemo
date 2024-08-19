@@ -4,33 +4,16 @@ using Microsoft.EntityFrameworkCore;
 namespace BackendData;
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public DbSet<Author> Authors => Set<Author>();
+    public DbSet<Blog> Blogs => Set<Blog>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        _ = modelBuilder.Entity<Author>().HasData(
-                        new Author
-                        {
-                            AuthorId = 1,
-                            Name = "Martin Fowler",
-                            PluralsightUrl = "https://app.pluralsight.com/profile/martin-fowler",
-                            TwitterAlias = "https://twitter.com/martinfawler"
-                        },
-                        new Author
-                        {
-                            AuthorId = 2,
-                            Name = "Eric Evans",
-                            PluralsightUrl = "https://app.pluralsight.com/profile/eric-evans",
-                            TwitterAlias = "https://twitter.com/ericevans"
-                        },
-                        new Author
-                        {
-                            AuthorId = 3,
-                            Name = "Steve Smith",
-                            PluralsightUrl = "https://app.pluralsight.com/profile/steve-smith",
-                            TwitterAlias = "https://twitter.com/stevesmith"
-                        }
-                    );
+        modelBuilder.Entity<Blog>().HasData(
+                new Blog { BlogId = 1, Url = "https://blog1.com", Rating = 2 },
+                new Blog { BlogId = 2, Url = "https://blog2.com", Rating = 3 },
+                new Blog { BlogId = 3, Url = "https://blog3.com", Rating = 1 },
+                new Blog { BlogId = 4, Url = "https://blog5.com", Rating = 3 }
+                );
 
         base.OnModelCreating(modelBuilder);
     }
