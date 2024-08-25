@@ -86,23 +86,23 @@ public class BlogsController(IBlogService BlogService) : ControllerBase
             return BadRequest();
         }
 
-        BlogDto? BlogDto = await BlogService.GetById(id);
-        if (BlogDto == null)
+        BlogDto? blogDto = await BlogService.GetById(id);
+        if (blogDto == null)
         {
             return NotFound();
         }
 
         // Create a mutable copy of the record
-        BlogDto? BlogDtoCopy = BlogDto with { };
+        BlogDto? blogDtoCopy = blogDto with { };
 
-        patchDoc.ApplyTo(BlogDtoCopy, ModelState);
+        patchDoc.ApplyTo(blogDtoCopy, ModelState);
 
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        await BlogService.UpdateAndSave(BlogDtoCopy);
+        await BlogService.UpdateAndSave(blogDtoCopy);
 
         return NoContent();
     }
