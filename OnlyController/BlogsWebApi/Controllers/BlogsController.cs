@@ -71,8 +71,8 @@ public class BlogsController(AppDbContext _context) : ControllerBase
     /// [
     ///     {
     ///         "op": "replace",
-    ///         "value": "jlerman",
-    ///         "path": "/twitterAlias"
+    ///         "value": 0,
+    ///         "path": "/rating"
     ///     }
     ///]
     /// </remarks>
