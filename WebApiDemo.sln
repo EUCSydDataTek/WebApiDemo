@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ResponseTypeDemo", "2.Res
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.WithServiceAndDTOs", "3.WithServiceAndDTOs", "{159992B7-F854-4F1B-B3F0-59808F560C4B}"
 	ProjectSection(SolutionItems) = preProject
+		WithServiceAndDTOs\BlogWebApiArkitekturDiagram_100pct.png = WithServiceAndDTOs\BlogWebApiArkitekturDiagram_100pct.png
 		WithServiceAndDTOs\README.md = WithServiceAndDTOs\README.md
 	EndProjectSection
 EndProject
