@@ -2,15 +2,17 @@
 
 Oversigt over demo-projekterne:
 
+0. SimpleWebApi
 1. OnlyController
-1. ResponseTypeDemo
-1. WithServiceAndDTOs
-1. CRUDrelatedEntities
+2. ResponseTypeDemo
+3. DependencyInjectionDemo
+4. WithServiceAndDTOs
+5. CRUDrelatedEntities
 
-## Sådan gør du
-Clone repositorie ned og åbn Solution filen i Visual Studio.
+## SÃ¥dan gÃ¸r du
+Clone repositorie ned og Ã¥bn Solution filen i Visual Studio.
 
-Navigér ned i de enkelte foldere og sæt det ønskede BlogsWebApi-projekt som start projekt.
+NavigÃ©r ned i de enkelte foldere og sÃ¦t det Ã¸nskede BlogsWebApi-projekt som start projekt.
 
 Debug (F5) og se resultatet i browseren med Swagger UI.
 
@@ -20,7 +22,7 @@ Se de lokale README.md filer for detaljer og for demo.
 
 ## PMC kommandoer
 
-Husk at vælge det rigtige projekt i Package Manager Console.
+Husk at vÃ¦lge det rigtige projekt i Package Manager Console.
 
 ```
 Drop-Database
