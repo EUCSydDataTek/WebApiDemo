@@ -1,0 +1,24 @@
+@RoutingConfig_HostAddress = https://localhost:7150
+
+GET {{RoutingConfig_HostAddress}}/api/configuration/my-key/
+Accept: application/json
+
+###
+
+GET {{RoutingConfig_HostAddress}}/api/configuration/database-configuration/
+Accept: application/json
+
+###
+
+GET {{RoutingConfig_HostAddress}}/api/Configuration/database-configuration-with-bind
+Accept: application/json
+
+###
+
+GET {{RoutingConfig_HostAddress}}/api/Configuration/database-configuration-with-generic-type
+Accept: application/json
+
+###
+
+GET {{RoutingConfig_HostAddress}}/api/Configuration/database-configuration-with-ioptions
+Accept: application/json

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogsWebApi.Controllers;
+
 [Route("api/[controller]")]
 [ApiController]
 public class BlogsController(IBlogService BlogService) : ControllerBase
