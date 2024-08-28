@@ -7,7 +7,11 @@ Oversigt over demo-projekterne:
 2. ResponseTypeDemo
 3. DependencyInjectionDemo
 4. WithServiceAndDTOs
-5. CRUDrelatedEntities
+5. Routing-Configuration
+6. Logging
+7. Middleware
+9. CRUDrelatedEntities
+   
 
 ## Sådan gør du
 Clone repositorie ned og åbn Solution filen i Visual Studio.
