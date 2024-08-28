@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.WithServiceAndDTOs", "4.W
 		WithServiceAndDTOs\README.md = WithServiceAndDTOs\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.CRUDrelatedEntities", "6.CRUDrelatedEntities", "{CD75E711-D796-4C19-B064-FB8D5628E539}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10.CRUDrelatedEntities", "10.CRUDrelatedEntities", "{CD75E711-D796-4C19-B064-FB8D5628E539}"
 	ProjectSection(SolutionItems) = preProject
 		CRUDrelatedEntities\README.md = CRUDrelatedEntities\README.md
 	EndProjectSection
@@ -56,6 +56,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutingConfig", "RoutingConfig\RoutingConfig.csproj", "{F4944902-782F-45F6-AAC0-9A2544C150B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Routing-Configuration", "5.Routing-Configuration", "{54618839-0DB4-4CA1-939D-2752E796462C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Logging", "6.Logging", "{70275C1E-D780-4214-8FB8-12F289B03A5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging", "LoggingMiddelware\Logging.csproj", "{4E6B5A99-5014-4F25-B91B-E1EF60DDCF98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middleware", "Middleware\Middleware.csproj", "{4D564BD4-63FC-42C8-8EBF-B44C411759A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Middleware", "7.Middleware", "{14660C6F-8613-452C-8403-D5FE821A3D2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +115,14 @@ Global
 		{F4944902-782F-45F6-AAC0-9A2544C150B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4944902-782F-45F6-AAC0-9A2544C150B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4944902-782F-45F6-AAC0-9A2544C150B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6B5A99-5014-4F25-B91B-E1EF60DDCF98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6B5A99-5014-4F25-B91B-E1EF60DDCF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6B5A99-5014-4F25-B91B-E1EF60DDCF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6B5A99-5014-4F25-B91B-E1EF60DDCF98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D564BD4-63FC-42C8-8EBF-B44C411759A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D564BD4-63FC-42C8-8EBF-B44C411759A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D564BD4-63FC-42C8-8EBF-B44C411759A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D564BD4-63FC-42C8-8EBF-B44C411759A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +139,8 @@ Global
 		{B0296E77-162F-4A0D-8D67-DBD193F37E03} = {C3CB225D-E78D-4D6E-B847-FD2648D58BD3}
 		{98E74678-68C6-4095-9F62-DBE045242533} = {6789B6A7-9A7C-4707-8677-BB8FA009DB9D}
 		{F4944902-782F-45F6-AAC0-9A2544C150B1} = {54618839-0DB4-4CA1-939D-2752E796462C}
+		{4E6B5A99-5014-4F25-B91B-E1EF60DDCF98} = {70275C1E-D780-4214-8FB8-12F289B03A5C}
+		{4D564BD4-63FC-42C8-8EBF-B44C411759A2} = {14660C6F-8613-452C-8403-D5FE821A3D2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D2C3F4D-8D13-4233-A8DE-BFD18DCC0727}

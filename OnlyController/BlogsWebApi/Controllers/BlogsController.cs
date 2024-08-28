@@ -29,23 +29,23 @@ public class BlogsController(AppDbContext _context) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Blog>> PostBlog(Blog Blog)
+    public async Task<ActionResult<Blog>> PostBlog(Blog blog)
     {
-        _context.Blogs.Add(Blog);
+        _context.Blogs.Add(blog);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction("GetBlog", new { id = Blog.BlogId }, Blog);
+        return CreatedAtAction("GetBlog", new { id = blog.BlogId }, blog);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutBlog(int id, Blog Blog)
+    public async Task<IActionResult> PutBlog(int id, Blog blog)
     {
-        if (id != Blog.BlogId)
+        if (id != blog.BlogId)
         {
             return BadRequest();
         }
 
-        _context.Entry(Blog).State = EntityState.Modified;
+        _context.Entry(blog).State = EntityState.Modified;
 
         try
         {
