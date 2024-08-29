@@ -1,5 +1,57 @@
 @BlogsWebApi_HostAddress = http://localhost:5147
 
+GET {{BlogsWebApi_HostAddress}}/api/Blogs
+Accept: application/json
+
+###
+
+GET {{BlogsWebApi_HostAddress}}/api/Blogs/1
+Accept: application/json
+
+###
+
+POST {{BlogsWebApi_HostAddress}}/api/Blogs
+Content-Type: application/json
+Accept: application/json
+
+{
+  "url": "https://blog5.com",
+  "rating": 3
+}
+
+###
+
+PUT {{BlogsWebApi_HostAddress}}/api/Blogs/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "blogId": 1,
+    "url": "https://blog1.com",
+    "rating": 0
+}
+
+###
+
+PATCH {{BlogsWebApi_HostAddress}}/api/Blogs/1
+Content-Type: application/json
+Accept: application/json
+
+[
+  {
+      "op": "replace",
+      "value": 2,
+      "path": "/rating"
+  }
+]
+
+###
+
+DELETE {{BlogsWebApi_HostAddress}}/api/Blogs/5
+Accept: application/json
+
+###
+
 GET {{BlogsWebApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
