@@ -9,25 +9,28 @@ namespace BlogsWebApi.Controllers;
 [ApiController]
 public class BlogsController(AppDbContext _context) : ControllerBase
 {
+    // GET: api/Blogs
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Blog>>> GetBlogs()
     {
         return await _context.Blogs.ToListAsync();
     }
 
+    // GET: api/Blogs/5
     [HttpGet("{id}")]
     public async Task<ActionResult<Blog>> GetBlog(int id)
     {
-        var Blog = await _context.Blogs.FindAsync(id);
+        var blog = await _context.Blogs.FindAsync(id);
 
-        if (Blog == null)
+        if (blog == null)
         {
             return NotFound();
         }
 
-        return Blog;
+        return blog;
     }
 
+    // POST: api/Blogs
     [HttpPost]
     public async Task<ActionResult<Blog>> PostBlog(Blog blog)
     {
@@ -37,6 +40,7 @@ public class BlogsController(AppDbContext _context) : ControllerBase
         return CreatedAtAction("GetBlog", new { id = blog.BlogId }, blog);
     }
 
+    // PUT: api/Blogs/5
     [HttpPut("{id}")]
     public async Task<IActionResult> PutBlog(int id, Blog blog)
     {
@@ -83,26 +87,26 @@ public class BlogsController(AppDbContext _context) : ControllerBase
             return BadRequest();
         }
 
-        var Blog = await _context.Blogs.FindAsync(id);
-        if (Blog == null)
+        var blog = await _context.Blogs.FindAsync(id);
+        if (blog == null)
         {
             return NotFound();
         }
 
-        patchDoc.ApplyTo(Blog, ModelState);
+        patchDoc.ApplyTo(blog, ModelState);
 
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        _context.Entry(Blog).State = EntityState.Modified;
+        _context.Entry(blog).State = EntityState.Modified;
         await _context.SaveChangesAsync();
 
         return NoContent();
     }
 
-
+    // DELETE: api/Blogs/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBlog(int id)
     {
