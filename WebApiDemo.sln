@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.WithServiceAndDTOs", "4.W
 		WithServiceAndDTOs\README.md = WithServiceAndDTOs\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9.CRUDrelatedEntities", "9.CRUDrelatedEntities", "{CD75E711-D796-4C19-B064-FB8D5628E539}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.CRUDrelatedEntities", "8.CRUDrelatedEntities", "{CD75E711-D796-4C19-B064-FB8D5628E539}"
 	ProjectSection(SolutionItems) = preProject
 		CRUDrelatedEntities\README.md = CRUDrelatedEntities\README.md
 	EndProjectSection
@@ -60,6 +60,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Middleware", "7.Middleware", "{14660C6F-8613-452C-8403-D5FE821A3D2B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging", "Logging\Logging.csproj", "{1E6CF0BA-73A2-4A36-8B7E-ECD2A7E74B37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationDemo", "AuthenticationDemo\AuthenticationDemo.csproj", "{322B9B9B-F199-4B70-8340-468929EBB91F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9.Security", "9.Security", "{0C847D9B-09DD-4FCF-A6BB-8DF0D8023DB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewIdentityApiDemo", "NewIdentityApiDemo\NewIdentityApiDemo.csproj", "{5864D582-E6F0-4695-A488-9A5C491EE082}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationDemoClient", "AuthenticationDemoClient\AuthenticationDemoClient.csproj", "{17078C2A-7E2F-488A-BFE6-9BAD8B82D9AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +123,18 @@ Global
 		{1E6CF0BA-73A2-4A36-8B7E-ECD2A7E74B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E6CF0BA-73A2-4A36-8B7E-ECD2A7E74B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E6CF0BA-73A2-4A36-8B7E-ECD2A7E74B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322B9B9B-F199-4B70-8340-468929EBB91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322B9B9B-F199-4B70-8340-468929EBB91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322B9B9B-F199-4B70-8340-468929EBB91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322B9B9B-F199-4B70-8340-468929EBB91F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5864D582-E6F0-4695-A488-9A5C491EE082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5864D582-E6F0-4695-A488-9A5C491EE082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5864D582-E6F0-4695-A488-9A5C491EE082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5864D582-E6F0-4695-A488-9A5C491EE082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17078C2A-7E2F-488A-BFE6-9BAD8B82D9AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17078C2A-7E2F-488A-BFE6-9BAD8B82D9AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17078C2A-7E2F-488A-BFE6-9BAD8B82D9AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17078C2A-7E2F-488A-BFE6-9BAD8B82D9AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -132,6 +152,9 @@ Global
 		{F4944902-782F-45F6-AAC0-9A2544C150B1} = {54618839-0DB4-4CA1-939D-2752E796462C}
 		{4D564BD4-63FC-42C8-8EBF-B44C411759A2} = {14660C6F-8613-452C-8403-D5FE821A3D2B}
 		{1E6CF0BA-73A2-4A36-8B7E-ECD2A7E74B37} = {70275C1E-D780-4214-8FB8-12F289B03A5C}
+		{322B9B9B-F199-4B70-8340-468929EBB91F} = {0C847D9B-09DD-4FCF-A6BB-8DF0D8023DB6}
+		{5864D582-E6F0-4695-A488-9A5C491EE082} = {0C847D9B-09DD-4FCF-A6BB-8DF0D8023DB6}
+		{17078C2A-7E2F-488A-BFE6-9BAD8B82D9AE} = {0C847D9B-09DD-4FCF-A6BB-8DF0D8023DB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D2C3F4D-8D13-4233-A8DE-BFD18DCC0727}

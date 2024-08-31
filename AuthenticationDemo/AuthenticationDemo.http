@@ -1,0 +1,33 @@
+@AuthenticationDemo_HostAddress = https://localhost:7280
+
+GET {{AuthenticationDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{AuthenticationDemo_HostAddress}}/account/register
+Content-Type: application/json
+Accept: application/json
+
+{
+"userName": "admin1",
+"email": "admin1@example.com",
+"password": "Passw0rd!"
+}
+
+###
+
+POST {{AuthenticationDemo_HostAddress}}/account/login
+Content-Type: application/json
+Accept: application/json
+
+{
+"userName": "admin1",
+"password": "Passw0rd!"
+}
+
+###
+
+GET {{AuthenticationDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluMSIsIm5iZiI6MTcyNTA5MzM0NSwiZXhwIjoxNzI1MTc5NzQ1LCJpYXQiOjE3MjUwOTMzNDUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyODAiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjgwIn0.cdTX-idROFij-a6aJZbillXA4wTnAbcIUJP3n4g0rD4
