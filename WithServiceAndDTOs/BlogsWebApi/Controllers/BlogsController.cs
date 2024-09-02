@@ -13,9 +13,9 @@ public class BlogsController(IBlogService BlogService) : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<BlogDto>>> GetBlogs()
     {
-        List<BlogDto> Blogs = await BlogService.GetAll();
+        List<BlogDto> blogs = await BlogService.GetAll();
 
-        return Ok(Blogs);
+        return Ok(blogs);
     }
 
     [HttpGet("{id:int}")]
@@ -23,13 +23,13 @@ public class BlogsController(IBlogService BlogService) : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<BlogDto>> GetById(int id)
     {
-        BlogDto? Blog = await BlogService.GetById(id);
-        if (Blog == null)
+        BlogDto? blog = await BlogService.GetById(id);
+        if (blog == null)
         {
             return NotFound();
         }
 
-        return Ok(Blog);
+        return Ok(blog);
     }
     #endregion
 
@@ -38,9 +38,9 @@ public class BlogsController(IBlogService BlogService) : ControllerBase
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<BlogDto>> Create(CreateBlogDto newBlog)
     {
-        BlogDto BlogDto = await BlogService.CreateAndSave(newBlog);
+        BlogDto blogDto = await BlogService.CreateAndSave(newBlog);
 
-        return CreatedAtAction("GetById", new { id = BlogDto.BlogId }, BlogDto);
+        return CreatedAtAction("GetById", new { id = blogDto.BlogId }, blogDto);
     }
     #endregion
 
@@ -55,12 +55,12 @@ public class BlogsController(IBlogService BlogService) : ControllerBase
         {
             return BadRequest();
         }
-        BlogDto? BlogDto = await BlogService.GetById(id);
-        if (BlogDto == null)
+        BlogDto? blogDto = await BlogService.GetById(id);
+        if (blogDto == null)
         {
             return NotFound();
         }
-        BlogDto = await BlogService.UpdateAndSave(editBlog);
+        blogDto = await BlogService.UpdateAndSave(editBlog);
 
         return NoContent();
     }
