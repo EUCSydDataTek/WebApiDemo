@@ -2,7 +2,7 @@
 
 namespace EmployeesApp.Repository;
 
-public class EmployeeRepository(EmployeeContext context) : IEmployeeRepository
+public class EmployeeService(EmployeeContext context) : IEmployeeService
 {
     public IEnumerable<Employee> GetAll() => context.Employees.ToList();
 

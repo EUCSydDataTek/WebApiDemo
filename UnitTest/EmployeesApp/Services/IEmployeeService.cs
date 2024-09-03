@@ -2,7 +2,7 @@
 
 namespace EmployeesApp.Repository;
 
-public interface IEmployeeRepository
+public interface IEmployeeService
 {
     IEnumerable<Employee> GetAll();
     Employee? GetEmployee(Guid id);

@@ -8,9 +8,9 @@ namespace EmployeesApp.Controllers;
 [ApiController]
 public class EmployeesController : ControllerBase
 {
-    private readonly IEmployeeRepository _repo;
+    private readonly IEmployeeService _repo;
     private readonly AccountNumberValidation _validation;
-    public EmployeesController(IEmployeeRepository repo)
+    public EmployeesController(IEmployeeService repo)
     {
         _repo = repo;
         _validation = new AccountNumberValidation();

@@ -7,12 +7,12 @@ using Moq;
 namespace EmployeesApp.Test;
 public class EmployeesControllerTests
 {
-    private readonly Mock<IEmployeeRepository> _mockRepo;
+    private readonly Mock<IEmployeeService> _mockRepo;
     private readonly EmployeesController _controller;
 
     public EmployeesControllerTests()
     {
-        _mockRepo = new Mock<IEmployeeRepository>();
+        _mockRepo = new Mock<IEmployeeService>();
         _controller = new EmployeesController(_mockRepo.Object);
     }
 
