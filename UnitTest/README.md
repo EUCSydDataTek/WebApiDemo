@@ -19,3 +19,9 @@ Ref: [Testing Controllers with Unit Tests and Moq in ASP.NET Core](https://code-
     - Ensure it returns BadRequest when the account number is invalid.
     - Ensure it returns CreatedAtAction when the employee is created successfully.
 
+
+## Integration Test
+
+Ref: [Integration Testing in ASP.NET Core](https://code-maze.com/aspnet-core-integration-testing/)
+
+Ref: [Testing Using Testcontainers for .NET and Docker](https://code-maze.com/csharp-testing-using-testcontainers-for-net-and-docker/)

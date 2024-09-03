@@ -4,7 +4,7 @@ using EmployeesApp.Validation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeesApp.Controllers;
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class EmployeesController : ControllerBase
 {
