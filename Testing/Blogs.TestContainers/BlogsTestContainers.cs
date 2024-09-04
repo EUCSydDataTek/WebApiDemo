@@ -1,15 +1,19 @@
-﻿using BlogsWebApi.ApiModels;
-using FluentAssertions;
-using System.Net;
+﻿using FluentAssertions;
 using System.Net.Http.Json;
+using System.Net;
+using BlogsWebApi.ApiModels;
 
-namespace Blogs.IntegrationTest;
-public class BlogsIntegrationTest : IClassFixture<IntegrationTestFactory<Program>>
+namespace Blogs.TestContainers;
+public class BlogsTestContainers : IClassFixture<IntegrationTestFactory>
+
 {
     private readonly HttpClient _client;
 
-    public BlogsIntegrationTest(IntegrationTestFactory<Program> factory)
-        => _client = factory.CreateClient();
+    public BlogsTestContainers(IntegrationTestFactory factory)
+    {
+        _client = factory.CreateClient();
+    }
+
 
     [Fact]
     public async Task GetBlogs_ReturnsBlogs()

@@ -18,6 +18,4 @@ Ref: [Testing Using Testcontainers for .NET and Docker](https://code-maze.com/cs
 
 Ref: [Testing Using Testcontainers for .NET and Docker (Code Maze)](https://code-maze.com/csharp-testing-using-testcontainers-for-net-and-docker/)
 
-Ref: [Integration Testing using Testcontainers in .NET 8](https://medium.com/codenx/integration-testing-using-testcontainers-in-net-8-520e8911d081)
-
-Ref: [Part 1: How to test a database in C# with TestContainers](https://daninacan.com/how-to-test-a-database-in-c-with-testcontainers/)
+Ref: [Testing an ASP.NET Core web app](https://testcontainers.com/guides/testing-an-aspnet-core-web-app/)

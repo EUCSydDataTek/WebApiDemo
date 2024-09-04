@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Blogs.IntegrationTest;
-public class TestingWebAppFactory<TEntryPoint> : WebApplicationFactory<Program> where TEntryPoint : Program
+public class IntegrationTestFactory<TEntryPoint> : WebApplicationFactory<Program> where TEntryPoint : Program
 {
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
