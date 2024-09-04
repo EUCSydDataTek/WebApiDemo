@@ -1,6 +1,7 @@
+using Logging;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LoggingMiddelware.Controllers;
+namespace Logging.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase

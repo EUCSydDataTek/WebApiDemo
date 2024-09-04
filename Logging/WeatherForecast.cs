@@ -1,4 +1,4 @@
-namespace LoggingMiddelware;
+namespace Logging;
 
 public class WeatherForecast
 {

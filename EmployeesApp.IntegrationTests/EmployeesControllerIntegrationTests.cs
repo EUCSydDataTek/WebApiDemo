@@ -1,4 +1,4 @@
-using EmployeesApp.Models;
+using EmployeesApp.WebApi.Models;
 using System.Net;
 using System.Net.Http.Json;
 

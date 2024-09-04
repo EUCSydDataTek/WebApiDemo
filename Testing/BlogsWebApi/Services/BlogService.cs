@@ -12,57 +12,58 @@ public class BlogService(AppDbContext context) : IBlogService
         List<Blog> Blogs = await context.Blogs.ToListAsync();
 
         return Blogs
-            .Select(a => new BlogDto(a.BlogId, a.Url, a.Rating ))
+            .Select(a => new BlogDto(a.BlogId, a.Url, a.Rating, a.AccountNumber ))
             .ToList();
     }
 
     public async Task<BlogDto?> GetById(int id)
     {
-        Blog? Blog = await context.Blogs.FindAsync(id);
+        Blog? blog = await context.Blogs.FindAsync(id);
 
-        if (Blog == null)
+        if (blog == null)
         {
             return null;
         }
 
-        return new BlogDto(Blog.BlogId, Blog.Url, Blog.Rating);
+        return new BlogDto(blog.BlogId, blog.Url, blog.Rating, blog.AccountNumber);
     }
 
     public async Task<BlogDto> CreateAndSave(CreateBlogDto newBlog)
     {
-        Blog Blog = new Blog
+        Blog blog = new Blog
         {
             Url = newBlog.Url!,
-            Rating = newBlog.Rating
+            Rating = newBlog.Rating,
+            AccountNumber = newBlog.AccountNumber!
         };
 
-        await context.Blogs.AddAsync(Blog);
+        await context.Blogs.AddAsync(blog);
         await context.SaveChangesAsync();
 
-        return new BlogDto(Blog.BlogId, Blog.Url, Blog.Rating);
+        return new BlogDto(blog.BlogId, blog.Url, blog.Rating, blog.AccountNumber);
     }
 
     public async Task<BlogDto> UpdateAndSave(BlogDto newBlog)
     {
-        Blog? Blog = await context.Blogs.FindAsync(newBlog.BlogId);
-        if (Blog == null)
+        Blog? blog = await context.Blogs.FindAsync(newBlog.BlogId);
+        if (blog == null)
         {
             throw new KeyNotFoundException($"Blog with ID {newBlog.BlogId} not found.");
         }
 
         // 1. Cannot be used when using DTOs and will update all fields
-        // context.Entry(Blog).State = EntityState.Modified;   
+        // context.Entry(blog).State = EntityState.Modified;   
 
         // 2. Specify the fields to update
-        Blog.Url = newBlog.Url!;
-        Blog.Rating = newBlog.Rating;
+        blog.Url = newBlog.Url!;
+        blog.Rating = newBlog.Rating;
 
         // 3. Or let EF Core do the work and only update the fields that have changed
-        //context.Entry(Blog!).CurrentValues.SetValues(newBlog);
+        //context.Entry(blog!).CurrentValues.SetValues(newBlog);
 
         await context.SaveChangesAsync();
 
-        return new BlogDto(Blog.BlogId, Blog.Url, Blog.Rating);
+        return new BlogDto(blog.BlogId, blog.Url, blog.Rating, blog.AccountNumber);
     }
 
     public async Task Delete(int id)
