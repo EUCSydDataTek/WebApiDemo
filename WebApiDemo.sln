@@ -3,25 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.OnlyController", "1.OnlyController", "{F5AC5AC9-E376-4DC7-8A9F-32ACA0DC7302}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. OnlyController", "1. OnlyController", "{F5AC5AC9-E376-4DC7-8A9F-32ACA0DC7302}"
 	ProjectSection(SolutionItems) = preProject
 		OnlyController\README.md = OnlyController\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendData", "OnlyController\BackendData\BackendData.csproj", "{26207B6F-572B-40E9-8A43-CC7388B4BA5F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ResponseTypeDemo", "2.ResponseTypeDemo", "{9748A154-7414-42CE-BCDE-EE7B76BB3E79}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. ReturnTypesDemo", "2. ReturnTypesDemo", "{9748A154-7414-42CE-BCDE-EE7B76BB3E79}"
 	ProjectSection(SolutionItems) = preProject
 		ResponseTypeDemo\README.md = ResponseTypeDemo\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.WithServiceAndDTOs", "4.WithServiceAndDTOs", "{159992B7-F854-4F1B-B3F0-59808F560C4B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. WithServiceAndDTOs", "4. WithServiceAndDTOs", "{159992B7-F854-4F1B-B3F0-59808F560C4B}"
 	ProjectSection(SolutionItems) = preProject
-		WithServiceAndDTOs\BlogWebApiArkitekturDiagram_100pct.png = WithServiceAndDTOs\BlogWebApiArkitekturDiagram_100pct.png
 		WithServiceAndDTOs\README.md = WithServiceAndDTOs\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.CRUDrelatedEntities", "8.CRUDrelatedEntities", "{CD75E711-D796-4C19-B064-FB8D5628E539}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. CRUDrelatedEntities", "7. CRUDrelatedEntities", "{CD75E711-D796-4C19-B064-FB8D5628E539}"
 	ProjectSection(SolutionItems) = preProject
 		CRUDrelatedEntities\README.md = CRUDrelatedEntities\README.md
 	EndProjectSection
@@ -47,23 +46,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogsWebApi", "OnlyControll
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionDemo", "DependencyInjectionDemo\DependencyInjectionDemo\DependencyInjectionDemo.csproj", "{98E74678-68C6-4095-9F62-DBE045242533}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.DependencyInjection", "3.DependencyInjection", "{6789B6A7-9A7C-4707-8677-BB8FA009DB9D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. DependencyInjection", "3. DependencyInjection", "{6789B6A7-9A7C-4707-8677-BB8FA009DB9D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutingConfig", "RoutingConfig\RoutingConfig.csproj", "{F4944902-782F-45F6-AAC0-9A2544C150B1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Routing-Configuration", "5.Routing-Configuration", "{54618839-0DB4-4CA1-939D-2752E796462C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Routing - Configuration", "5. Routing - Configuration", "{54618839-0DB4-4CA1-939D-2752E796462C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Logging", "6.Logging", "{70275C1E-D780-4214-8FB8-12F289B03A5C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Logging - Middleware", "6. Logging - Middleware", "{70275C1E-D780-4214-8FB8-12F289B03A5C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Middleware", "Middleware\Middleware.csproj", "{4D564BD4-63FC-42C8-8EBF-B44C411759A2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Middleware", "7.Middleware", "{14660C6F-8613-452C-8403-D5FE821A3D2B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging", "Logging\Logging.csproj", "{1E6CF0BA-73A2-4A36-8B7E-ECD2A7E74B37}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationDemo", "AuthenticationDemo\AuthenticationDemo.csproj", "{322B9B9B-F199-4B70-8340-468929EBB91F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9.Security", "9.Security", "{0C847D9B-09DD-4FCF-A6BB-8DF0D8023DB6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8. Security", "8. Security", "{0C847D9B-09DD-4FCF-A6BB-8DF0D8023DB6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewIdentityApiDemo", "NewIdentityApiDemo\NewIdentityApiDemo.csproj", "{5864D582-E6F0-4695-A488-9A5C491EE082}"
 EndProject
@@ -73,7 +70,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JWTdemo", "JWTdemo", "{9D18
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogs.IntegrationTest", "Testing\Blogs.IntegrationTest\Blogs.IntegrationTest.csproj", "{EA2D75A4-D324-40E7-BD6E-24F6A665F7DD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10.Testing", "10.Testing", "{D08F480B-F8CD-493B-9B53-06AD17D9E4E6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9. Testing", "9. Testing", "{D08F480B-F8CD-493B-9B53-06AD17D9E4E6}"
 	ProjectSection(SolutionItems) = preProject
 		Testing\README.md = Testing\README.md
 	EndProjectSection
@@ -187,7 +184,7 @@ Global
 		{DE09746B-CC8E-4800-BD6F-C0FD0B6A9D12} = {F5AC5AC9-E376-4DC7-8A9F-32ACA0DC7302}
 		{98E74678-68C6-4095-9F62-DBE045242533} = {6789B6A7-9A7C-4707-8677-BB8FA009DB9D}
 		{F4944902-782F-45F6-AAC0-9A2544C150B1} = {54618839-0DB4-4CA1-939D-2752E796462C}
-		{4D564BD4-63FC-42C8-8EBF-B44C411759A2} = {14660C6F-8613-452C-8403-D5FE821A3D2B}
+		{4D564BD4-63FC-42C8-8EBF-B44C411759A2} = {70275C1E-D780-4214-8FB8-12F289B03A5C}
 		{1E6CF0BA-73A2-4A36-8B7E-ECD2A7E74B37} = {70275C1E-D780-4214-8FB8-12F289B03A5C}
 		{322B9B9B-F199-4B70-8340-468929EBB91F} = {9D18175D-5FF2-4929-8ACC-E30911699C38}
 		{5864D582-E6F0-4695-A488-9A5C491EE082} = {0C847D9B-09DD-4FCF-A6BB-8DF0D8023DB6}
