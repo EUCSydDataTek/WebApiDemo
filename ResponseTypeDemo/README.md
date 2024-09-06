@@ -1,4 +1,4 @@
-# 2. ReturnTypeDemo
+# 2. ReturnTypesDemo
 
 Dette projekt viser 3 forskellige måder at returnere data fra en controller i en ASP.NET Core Web API. Studér SwaggerUI
 for at se forskellen på de 3 metoder.

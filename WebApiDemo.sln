@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. ReturnTypesDemo", "2. Re
 		ResponseTypeDemo\README.md = ResponseTypeDemo\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. WithServiceAndDTOs", "4. WithServiceAndDTOs", "{159992B7-F854-4F1B-B3F0-59808F560C4B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. WithServiceAndDTOs", "3. WithServiceAndDTOs", "{159992B7-F854-4F1B-B3F0-59808F560C4B}"
 	ProjectSection(SolutionItems) = preProject
 		WithServiceAndDTOs\README.md = WithServiceAndDTOs\README.md
 	EndProjectSection
@@ -46,7 +46,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogsWebApi", "OnlyControll
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionDemo", "DependencyInjectionDemo\DependencyInjectionDemo\DependencyInjectionDemo.csproj", "{98E74678-68C6-4095-9F62-DBE045242533}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. DependencyInjection", "3. DependencyInjection", "{6789B6A7-9A7C-4707-8677-BB8FA009DB9D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. DependencyInjection", "4. DependencyInjection", "{6789B6A7-9A7C-4707-8677-BB8FA009DB9D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutingConfig", "RoutingConfig\RoutingConfig.csproj", "{F4944902-782F-45F6-AAC0-9A2544C150B1}"
 EndProject
