@@ -9,7 +9,10 @@ I dette første projekt er der kun en controller, som håndterer alle operationer 
 ## BackendData projektet
 BackendData-projektet er et ClassLibrary. 
 
-Nuget-pakkerne `Microsoft.EntityFrameworkCore.Sqlite` og `Microsoft.EntityFrameworkCore.Tools` er installeret.
+Diss Nuget-pakkerne er installeret.
+- `Microsoft.EntityFrameworkCore.Sqlite`
+- `Microsoft.EntityFrameworkCore.Tools` 
+
 
 Gennemgå følgende filer:
 

@@ -1,0 +1,28 @@
+@Versioning_HostAddress = https://localhost:7163
+
+# No Versioning
+GET {{Versioning_HostAddress}}/api/StringListQuery
+Accept: application/json
+
+###
+
+# Query String Parameter Versioning
+GET {{Versioning_HostAddress}}/api/StringListQuery?api-version=1.0
+Accept: application/json
+
+###
+
+# Media/Header API Versioning
+GET {{Versioning_HostAddress}}/api/StringListMediaHeader
+Accept: application/json
+X-Version: 2.0
+
+###
+
+# URI Versioning
+GET {{Versioning_HostAddress}}/api/v3/StringListUri
+
+###
+
+# URI Versioning of method
+GET {{Versioning_HostAddress}}/api/v4/StringListUri

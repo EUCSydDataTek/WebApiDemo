@@ -2,6 +2,11 @@
 
 GET {{APIkey_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{APIkey_HostAddress}}/weatherforecast/
+Accept: application/json
 Api_Key: ABCDE12345
 
 ###
