@@ -26,6 +26,8 @@ public class BlogController : ControllerBase
             Description = "C#, .NET and Web Development Tutorials",
             BlogPosts = blogPosts
         });
-        return Ok(blogs);
+         return Ok(blogs);
+
+        //return Content("Hello, World!", "text/plain");
     }
 }

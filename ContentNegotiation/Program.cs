@@ -1,3 +1,5 @@
+using ContentNegotiation.Formatter;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +9,9 @@ builder.Services.AddControllers(options =>
 {
     options.RespectBrowserAcceptHeader = true;
     options.ReturnHttpNotAcceptable = true;
-}).AddXmlSerializerFormatters();
+})
+.AddXmlSerializerFormatters()
+.AddMvcOptions(options => options.OutputFormatters.Add(new CsvOutputFormatter()));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

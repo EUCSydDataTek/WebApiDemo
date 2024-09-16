@@ -6,11 +6,11 @@ Accept: application/xml
 
 ###
 
-# Wrong Content Type
+# Text Content Type (406 Not Acceptable if Content is Json)
 GET {{ContentNegotiation_HostAddress}}/api/blog
 Accept: text/plain
 
 ###
 
 GET {{ContentNegotiation_HostAddress}}/api/blog
-Accept: text/html
+Accept: application/csv
