@@ -1,0 +1,9 @@
+@Caching_HostAddress = https://localhost:7078
+
+GET {{Caching_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Invalidate the cache
+PUT {{Caching_HostAddress}}/weatherforecast/

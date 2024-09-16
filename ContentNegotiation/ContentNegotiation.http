@@ -1,0 +1,16 @@
+@ContentNegotiation_HostAddress = https://localhost:7118
+
+# Accept XML
+GET {{ContentNegotiation_HostAddress}}/api/blog
+Accept: application/xml
+
+###
+
+# Wrong Content Type
+GET {{ContentNegotiation_HostAddress}}/api/blog
+Accept: text/plain
+
+###
+
+GET {{ContentNegotiation_HostAddress}}/api/blog
+Accept: text/html

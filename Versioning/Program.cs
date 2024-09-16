@@ -2,7 +2,7 @@ using Asp.Versioning;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container. https://medium.com/@celery_liu/asp-net-core-web-api-with-swagger-api-versioning-for-dotnet-8-c8ce2fd7808c
+// Add services to the container. 
 
 var apiVersioningBuilder = builder.Services.AddApiVersioning(o =>
 {
