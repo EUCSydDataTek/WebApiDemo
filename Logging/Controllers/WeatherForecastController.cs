@@ -1,4 +1,3 @@
-using Logging;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Logging.Controllers;
@@ -22,6 +21,7 @@ public class WeatherForecastController : ControllerBase
     public IEnumerable<WeatherForecast> Get()
     {
         _logger.Log(LogLevel.Information, "This is a logging message.");
+        //_logger.LogInformation("This is a logging message.");
 
         _logger.LogTrace("This is a trace message");
 

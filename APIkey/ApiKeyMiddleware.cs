@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-
 public class ApiKeyMiddleware
 {
     private readonly RequestDelegate _next;
