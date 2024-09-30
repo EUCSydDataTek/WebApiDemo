@@ -1,0 +1,72 @@
+@RoutingDemo_HostAddress = https://localhost:7020
+
+# Henter alle Posts
+GET {{RoutingDemo_HostAddress}}/api/posts
+Accept: application/json
+
+###
+
+# Henter en bestemt Post
+GET {{RoutingDemo_HostAddress}}/api/posts/1
+Accept: application/json
+
+###
+
+# En specialiseret route med tilføjelsen /publish
+PUT {{RoutingDemo_HostAddress}}/api/posts/1/publish
+Content-Type: application/json
+Accept: application/json
+
+{
+  "postId": 1,
+  "title": "First Post",
+  "content": "This is the first post",
+  "rating": 4,
+  "userId": 1
+}
+
+###
+
+# Giver en AmbiguousMatchExeption fordi routen allerede er benyttet i GetPost(int id)
+GET {{RoutingDemo_HostAddress}}/api/posts/1
+Accept: application/json
+
+###
+
+# Her undgår man AmbiguousMatchExeption ved at udvide routen med /user
+GET {{RoutingDemo_HostAddress}}/api/posts/user/1
+Accept: application/json
+
+###
+
+# Forkert parameter type
+GET {{RoutingDemo_HostAddress}}/api/posts/abc
+Accept: application/json
+
+##########################################################################
+
+# MODEL BINDING DEMO
+
+# Henter en bestemt Post via en Route Parameter
+GET {{RoutingDemo_HostAddress}}/api/posts/user/2
+Accept: application/json
+
+### 
+
+# Henter en bestemt Post via en QueryString Parameter
+GET {{RoutingDemo_HostAddress}}/api/posts/user?userId=2
+Accept: application/json
+
+###
+
+# Et Post objekt sendes via Request Body
+POST {{RoutingDemo_HostAddress}}/api/posts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New Post",
+  "content": "This is a new post",
+  "rating": 4,
+  "userId": 1
+}
