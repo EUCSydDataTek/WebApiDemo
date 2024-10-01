@@ -71,6 +71,10 @@ public class BlogService(AppDbContext context) : IBlogService
 
         // Before EF 7.0
         Blog? blog = await context.Blogs.FindAsync(id);
+        if (blog == null)
+        {
+            throw new KeyNotFoundException("Blog not found.");
+        }
         context.Remove(blog!);
         await context.SaveChangesAsync();
     }
