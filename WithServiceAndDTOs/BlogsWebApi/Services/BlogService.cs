@@ -70,8 +70,8 @@ public class BlogService(AppDbContext context) : IBlogService
         //await context.Blogs.Where(a => a.BlogId == id).ExecuteDeleteAsync();
 
         // Before EF 7.0
-        Blog? Blog = await context.Blogs.FindAsync(id);
-        context.Remove(Blog!);
+        Blog? blog = await context.Blogs.FindAsync(id);
+        context.Remove(blog!);
         await context.SaveChangesAsync();
     }
 
