@@ -36,7 +36,7 @@ public class BlogService(AppDbContext context) : IBlogService
             Rating = newBlog.Rating
         };
 
-        await context.Blogs.AddAsync(Blog);
+        context.Blogs.Add(Blog);
         await context.SaveChangesAsync();
 
         return new BlogDto(Blog.BlogId, Blog.Url, Blog.Rating);
