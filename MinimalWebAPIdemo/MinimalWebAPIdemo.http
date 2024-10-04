@@ -1,0 +1,43 @@
+@MinimalWebAPIdemo_HostAddress = https://localhost:7244
+
+GET {{MinimalWebAPIdemo_HostAddress}}/hello/
+Accept: application/json
+
+###
+
+GET {{MinimalWebAPIdemo_HostAddress}}/persons/Alice
+Accept: application/json
+
+###
+
+POST {{MinimalWebAPIdemo_HostAddress}}/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Bob",
+  "age": 25
+}
+
+###
+
+PUT {{MinimalWebAPIdemo_HostAddress}}/persons/Steve
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Steve",
+  "age": 25
+}
+
+###
+
+DELETE {{MinimalWebAPIdemo_HostAddress}}/persons/Alice
+Accept: application/json
+
+###
+
+GET {{MinimalWebAPIdemo_HostAddress}}/persons/
+Accept: application/json
+
+###
