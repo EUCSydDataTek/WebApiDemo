@@ -3,47 +3,51 @@ using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Containers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Testcontainers.MsSql;
 
 namespace Blogs.TestContainers;
 public class IntegrationTestFactory : WebApplicationFactory<Program>, IAsyncLifetime
 {
-    private const string Database = "TestDatabase"; // Use a different database name
-    private const string Username = "sa";
     private const string Password = "yourStrong(!)Password";
-    private const ushort MsSqlPort = 1433;
 
-    private readonly IContainer _mssqlContainer;
+    private readonly MsSqlContainer _mssqlContainer;
 
     public IntegrationTestFactory()
     {
-        // Default: mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04
-        //_mssqlContainer = new MsSqlBuilder().Build();
+        // Default: mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04
+        _mssqlContainer = new MsSqlBuilder()
+                              .WithPassword(Password)
+                              .Build();
 
-        _mssqlContainer = new ContainerBuilder()
-        .WithImage("mcr.microsoft.com/mssql/server:2022-latest")
-        .WithPortBinding(MsSqlPort, true)
-        .WithEnvironment("ACCEPT_EULA", "Y")
-        .WithEnvironment("SQLCMDUSER", Username)
-        .WithEnvironment("SQLCMDPASSWORD", Password)
-        .WithEnvironment("MSSQL_SA_PASSWORD", Password)
-        .WithWaitStrategy(Wait.ForUnixContainer().UntilPortIsAvailable(MsSqlPort))
-        .Build();
+        #region Detailed Config
+        //IContainer container = new ContainerBuilder()
+        //.WithImage("mcr.microsoft.com/mssql/server:2022-latest")
+        //.WithPortBinding(1433, true)
+        //.WithEnvironment("ACCEPT_EULA", "Y")
+        //.WithEnvironment("SQLCMDUSER", "sa")
+        //.WithEnvironment("SQLCMDPASSWORD", Password)
+        //.WithEnvironment("MSSQL_SA_PASSWORD", Password)
+        //.WithWaitStrategy(Wait.ForUnixContainer().UntilInternalTcpPortIsAvailable(1433))
+        //.Build();
+        #endregion
     }
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        var host = _mssqlContainer.Hostname;
-        var port = _mssqlContainer.GetMappedPublicPort(MsSqlPort);
-
         builder.ConfigureServices(services =>
         {
             services.RemoveAll(typeof(DbContextOptions<AppDbContext>));
 
+            var ConnectionStringBuilder = new SqlConnectionStringBuilder(_mssqlContainer.GetConnectionString());
+            ConnectionStringBuilder.InitialCatalog = "TestDB";
+
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer($"Server={host},{port};Database={Database};User Id={Username};Password={Password};TrustServerCertificate=True;MultipleActiveResultSets = true"));
+                options.UseSqlServer(ConnectionStringBuilder.ConnectionString)
+            );
         });
     }
 

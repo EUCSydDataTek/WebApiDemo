@@ -19,6 +19,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\BackendData\BackendData.csproj" />
+	  <ProjectReference Include="..\BlogsWebApi\BlogsWebApi.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Using Include="Xunit" />
 	</ItemGroup>
 
